@@ -15,6 +15,9 @@ import Motivations from '@/pages/Motivations';
 const guestRoutes = createStackNavigator({
     Login: {
         screen: Login,
+        navigationOptions: {
+            title: 'Login',
+        },
     },
 });
 

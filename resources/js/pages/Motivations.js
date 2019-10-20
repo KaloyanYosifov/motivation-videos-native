@@ -8,16 +8,16 @@ import { SafeAreaView, Text } from 'react-native';
  * Internal dependencies.
  */
 
-class Home extends React.Component {
+class Motivations extends React.Component {
     render() {
         return (
             <SafeAreaView>
                 <Text>
-                    Hello Welcome to Home
+                    Hello Welcome to Motivations
                 </Text>
             </SafeAreaView>
         );
     }
 }
 
-export default Home;
+export default Motivations;

@@ -2,20 +2,21 @@
  * External dependencies.
  */
 import React from 'react';
-import { SafeAreaView, Text } from 'react-native';
+import { Text } from 'react-native';
 
 /**
  * Internal dependencies.
  */
+import BaseView from '@/fragments/BaseView';
 
 class Motivations extends React.Component {
     render() {
         return (
-            <SafeAreaView>
+            <BaseView>
                 <Text>
                     Hello Welcome to Motivations
                 </Text>
-            </SafeAreaView>
+            </BaseView>
         );
     }
 }

@@ -19,6 +19,8 @@ const guestRoutes = createStackNavigator({
             title: 'Login',
         },
     },
+}, {
+    headerMode: 'none',
 });
 
 const loggedInRoutes = createBottomTabNavigator({

@@ -5,6 +5,7 @@ module.exports = {
             root: ['./resources/js'],
             alias: {
                 '@': './resources/js',
+                '@images': './resources/images',
             },
         }],
     ],

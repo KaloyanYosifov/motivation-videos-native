@@ -8,14 +8,13 @@ import { Text } from 'react-native';
  * Internal dependencies.
  */
 import BaseView from '@/fragments/BaseView';
+import Logo from '@/components/Logo';
 
 class Login extends React.Component {
     render() {
         return (
             <BaseView>
-                <Text>
-                    Login
-                </Text>
+                <Logo />
             </BaseView>
         );
     }

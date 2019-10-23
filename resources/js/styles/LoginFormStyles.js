@@ -15,6 +15,10 @@ export default StyleSheet.create({
     input: {
         marginBottom: 27,
     },
+    buttonContainer: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+    },
     title: {
         color: colors.secondary,
         fontSize: fontSize.h1,

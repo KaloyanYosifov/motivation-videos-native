@@ -37,7 +37,9 @@ class LoginForm extends React.Component {
                     }}
                 />
 
-                <Button text="Submit" />
+                <View style={LoginFormStyles.buttonContainer}>
+                    <Button text="Submit" />
+                </View>
             </View>
         );
     }

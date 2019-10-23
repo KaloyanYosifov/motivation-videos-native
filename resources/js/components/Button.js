@@ -16,7 +16,7 @@ class Button extends React.Component {
         ) : (this.props.children);
 
         return (
-            <TouchableOpacity style={ButtonStyles.default} {...this.props}>
+            <TouchableOpacity {...this.props} style={[ButtonStyles.default, this.props.style]}>
                 {renderContent}
             </TouchableOpacity>
         );

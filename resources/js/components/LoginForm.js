@@ -19,26 +19,32 @@ class LoginForm extends React.Component {
                     Login
                 </Text>
 
-                <Input
-                    style={LoginFormStyles.input}
-                    label="Email:"
-                    inputProps={{
-                        autoCompleteType: 'email',
-                    }}
-                />
+                <View style={LoginFormStyles.inputsContainer}>
+                    <Input
+                        style={LoginFormStyles.input}
+                        label="Email:"
+                        inputProps={{
+                            autoCompleteType: 'email',
+                        }}
+                    />
 
-                <Input
-                    style={LoginFormStyles.input}
-                    label="Password:"
-                    inputProps={{
-                        secureTextEntry: true,
-                        autoCompleteType: 'password',
-                        textContentType: 'password',
-                    }}
-                />
+                    <Input
+                        style={LoginFormStyles.input}
+                        label="Password:"
+                        inputProps={{
+                            secureTextEntry: true,
+                            autoCompleteType: 'password',
+                            textContentType: 'password',
+                        }}
+                    />
+                </View>
 
                 <View style={LoginFormStyles.buttonContainer}>
-                    <Button text="Submit" />
+                    <Button style={LoginFormStyles.button} text="Submit" />
+
+                    <Text style={LoginFormStyles.additionalText}>
+                        Don't have an account?
+                    </Text>
                 </View>
             </View>
         );

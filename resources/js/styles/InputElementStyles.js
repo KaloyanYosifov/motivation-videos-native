@@ -18,7 +18,7 @@ export default StyleSheet.create({
         marginBottom: 15,
     },
     input: {
-        height: 27,
+        height: 30,
         paddingHorizontal: 15,
         color: colors.primary,
         backgroundColor: colors.baseColor,

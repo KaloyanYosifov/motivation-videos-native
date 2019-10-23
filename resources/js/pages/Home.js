@@ -7,9 +7,10 @@ import { Text } from 'react-native';
 /**
  * Internal dependencies.
  */
+import Page from '@/pages/Page';
 import BaseView from '@/fragments/BaseView';
 
-class Home extends React.Component {
+class Home extends Page {
     render() {
         return (
             <BaseView>

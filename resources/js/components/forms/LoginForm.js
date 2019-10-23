@@ -7,9 +7,10 @@ import { View, Text } from 'react-native';
 /**
  * Internal dependencies.
  */
-import BaseFormStyles from '@/styles/BaseFormStyles';
 import Button from '@/components/Button';
+import Navigator from '@/classes/Navigator';
 import Input from '@/components/form-elements/Input';
+import BaseFormStyles from '@/styles/BaseFormStyles';
 
 class LoginForm extends React.Component {
     render() {
@@ -40,9 +41,15 @@ class LoginForm extends React.Component {
                 </View>
 
                 <View style={BaseFormStyles.buttonContainer}>
-                    <Button style={BaseFormStyles.button} text="Login" />
+                    <Button
+                        style={BaseFormStyles.button}
+                        text="Login"
+                    />
 
-                    <Text style={BaseFormStyles.additionalText}>
+                    <Text
+                        style={BaseFormStyles.additionalText}
+                        onPress={() => Navigator.getNavigation().navigate('Register')}
+                    >
                         Don't have an account?
                     </Text>
                 </View>

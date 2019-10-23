@@ -6,12 +6,13 @@ import React from 'react';
 /**
  * Internal dependencies.
  */
-import LoginRegisterStyles from '@/styles/LoginRegisterStyles';
-import BaseView from '@/fragments/BaseView';
+import Page from '@/pages/Page';
 import Logo from '@/components/Logo';
+import BaseView from '@/fragments/BaseView';
 import RegisterForm from '@/components/forms/RegisterForm';
+import LoginRegisterStyles from '@/styles/LoginRegisterStyles';
 
-class Login extends React.Component {
+class Login extends Page {
     render() {
         return (
             <BaseView>

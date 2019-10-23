@@ -12,10 +12,12 @@ export default StyleSheet.create({
     default: {
 
     },
-    title: {
-        color: colors.secondary,
-        fontSize: 48,
-        textAlign: 'center',
-        fontWeight: 'bold',
+    label: {
+        color: colors.baseColor,
+    },
+    input: {
+        color: colors.baseColor,
+        backgroundColor: colors.baseColor,
+        borderRadius: 5,
     },
 });

@@ -14,7 +14,7 @@ import LoginForm from '@/components/LoginForm';
 class Login extends React.Component {
     render() {
         return (
-            <BaseView style={LoginStyles.default}>
+            <BaseView>
                 <Logo style={LoginStyles.logo} />
                 <LoginForm style={LoginStyles.loginForm} />
             </BaseView>

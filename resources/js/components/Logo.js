@@ -13,7 +13,7 @@ import LogoImage from '@images/Logo.png';
 class Logo extends React.Component {
     render() {
         return (
-            <View style={{ ...LogoStyles.default, ...this.props.style }}>
+            <View style={[LogoStyles.default, this.props.style]}>
                 <Image style={LogoStyles.image} source={LogoImage} />
             </View>
         );

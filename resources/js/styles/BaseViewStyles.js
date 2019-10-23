@@ -3,9 +3,18 @@
  */
 import { StyleSheet } from 'react-native';
 
+/**
+ * Internal dependencies.
+ */
+import { colors } from '@/utils/style-variables';
+
 export default StyleSheet.create({
     default: {
-        backgroundColor: '#45484B',
+        backgroundColor: colors.primary,
         flex: 1,
+        padding: 20,
+    },
+    view: {
+        paddingHorizontal: 20,
     },
 });

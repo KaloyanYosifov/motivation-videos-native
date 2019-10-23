@@ -14,7 +14,7 @@ import Input from '@/components/form-elements/Input';
 class LoginForm extends React.Component {
     render() {
         return (
-            <View style={[LoginFormStyles.default, this.props.style]}>
+            <View style={this.props.style}>
                 <Text style={LoginFormStyles.title}>
                     Login
                 </Text>

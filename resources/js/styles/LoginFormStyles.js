@@ -9,9 +9,6 @@ import { StyleSheet } from 'react-native';
 import { colors, fontSize } from '@/utils/style-variables';
 
 export default StyleSheet.create({
-    default: {
-
-    },
     inputsContainer: {
         marginBottom: 35,
     },

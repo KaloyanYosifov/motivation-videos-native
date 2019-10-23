@@ -6,18 +6,23 @@ import { StyleSheet } from 'react-native';
 /**
  * Internal dependencies.
  */
-import { colors } from '@/utils/style-variables';
+import { colors, fontSize } from '@/utils/style-variables';
 
 export default StyleSheet.create({
     default: {
 
     },
     label: {
-        color: colors.baseColor,
+        color: colors.secondary,
+        fontSize: fontSize.inputLabel,
+        marginBottom: 15,
     },
     input: {
-        color: colors.baseColor,
+        height: 27,
+        paddingHorizontal: 15,
+        color: colors.primary,
         backgroundColor: colors.baseColor,
+        fontSize: fontSize.base,
         borderRadius: 5,
     },
 });

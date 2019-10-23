@@ -6,15 +6,18 @@ import { StyleSheet } from 'react-native';
 /**
  * Internal dependencies.
  */
-import { colors } from '@/utils/style-variables';
+import { colors, fontSize } from '@/utils/style-variables';
 
 export default StyleSheet.create({
     default: {
 
     },
+    input: {
+        marginBottom: 27,
+    },
     title: {
         color: colors.secondary,
-        fontSize: 48,
+        fontSize: fontSize.h1,
         textAlign: 'center',
         fontWeight: 'bold',
     },

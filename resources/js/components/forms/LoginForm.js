@@ -48,7 +48,7 @@ class LoginForm extends React.Component {
 
                     <Text
                         style={BaseFormStyles.additionalText}
-                        onPress={() => Navigator.getNavigation().navigate('Register')}
+                        onPress={() => Navigator.navigate('Register')}
                     >
                         Don't have an account?
                     </Text>

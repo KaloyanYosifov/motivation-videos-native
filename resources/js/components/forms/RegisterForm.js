@@ -7,9 +7,10 @@ import { View, Text } from 'react-native';
 /**
  * Internal dependencies.
  */
-import BaseFormStyles from '@/styles/BaseFormStyles';
 import Button from '@/components/Button';
+import Navigator from '@/classes/Navigator';
 import Input from '@/components/form-elements/Input';
+import BaseFormStyles from '@/styles/BaseFormStyles';
 
 class RegisterForm extends React.Component {
     render() {
@@ -50,7 +51,10 @@ class RegisterForm extends React.Component {
                 <View style={BaseFormStyles.buttonContainer}>
                     <Button style={BaseFormStyles.button} text="Register" />
 
-                    <Text style={BaseFormStyles.additionalText}>
+                    <Text
+                        style={BaseFormStyles.additionalText}
+                        onPress={() => Navigator.navigate('Login')}
+                    >
                         Have an account?
                     </Text>
                 </View>

@@ -9,14 +9,14 @@ import React from 'react';
 import LoginRegisterStyles from '@/styles/LoginRegisterStyles';
 import BaseView from '@/fragments/BaseView';
 import Logo from '@/components/Logo';
-import LoginForm from '@/components/forms/LoginForm';
+import RegisterForm from '@/components/forms/RegisterForm';
 
 class Login extends React.Component {
     render() {
         return (
             <BaseView>
                 <Logo style={LoginRegisterStyles.logo} />
-                <LoginForm />
+                <RegisterForm />
             </BaseView>
         );
     }

@@ -10,15 +10,12 @@ import { createStackNavigator } from 'react-navigation-stack';
  */
 import Home from '@/pages/Home';
 import Login from '@/pages/Login';
+import Register from '@/pages/Register';
 import Motivations from '@/pages/Motivations';
 
 const guestRoutes = createStackNavigator({
-    Login: {
-        screen: Login,
-        navigationOptions: {
-            title: 'Login',
-        },
-    },
+    Login,
+    Register,
 }, {
     headerMode: 'none',
 });

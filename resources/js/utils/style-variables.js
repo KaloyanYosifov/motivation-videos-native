@@ -1,6 +1,7 @@
 export const colors = {
-    primary: '#45484B',
+    primary: '#45484b',
     secondary: '#e0e4cc',
+    tertiary: '#36393b',
     baseColor: '#fff',
 };
 
@@ -13,4 +14,5 @@ export const fontSize = {
     h6: 14,
     base: 16,
     inputLabel: 18,
+    button: 24,
 };

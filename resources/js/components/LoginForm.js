@@ -8,6 +8,7 @@ import { View, Text } from 'react-native';
  * Internal dependencies.
  */
 import LoginFormStyles from '@/styles/LoginFormStyles';
+import Button from '@/components/Button';
 import Input from '@/components/form-elements/Input';
 
 class LoginForm extends React.Component {
@@ -35,6 +36,8 @@ class LoginForm extends React.Component {
                         textContentType: 'password',
                     }}
                 />
+
+                <Button text="Submit" />
             </View>
         );
     }

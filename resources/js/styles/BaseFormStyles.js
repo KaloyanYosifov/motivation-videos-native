@@ -10,7 +10,7 @@ import { colors, fontSize } from '@/utils/style-variables';
 
 export default ScaledSheet.create({
     inputsContainer: {
-        marginBottom: '35@ms',
+        marginBottom: '25@ms',
     },
     input: {
         marginBottom: '27@ms',

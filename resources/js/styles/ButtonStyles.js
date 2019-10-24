@@ -1,17 +1,17 @@
 /**
  * External dependencies.
  */
-import { StyleSheet } from 'react-native';
+import { ScaledSheet } from 'react-native-size-matters';
 
 /**
  * Internal dependencies.
  */
 import { colors, fontSize } from '@/utils/style-variables';
 
-export default StyleSheet.create({
+export default ScaledSheet.create({
     default: {
-        width: 200,
-        height: 50,
+        width: '200@s',
+        height: '50@vs',
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: colors.tertiary,

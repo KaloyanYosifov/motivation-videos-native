@@ -1,26 +1,26 @@
 /**
  * External dependencies.
  */
-import { StyleSheet } from 'react-native';
+import { ScaledSheet } from 'react-native-size-matters';
 
 /**
  * Internal dependencies.
  */
 import { colors, fontSize } from '@/utils/style-variables';
 
-export default StyleSheet.create({
+export default ScaledSheet.create({
     inputsContainer: {
-        marginBottom: 35,
+        marginBottom: '35@ms',
     },
     input: {
-        marginBottom: 27,
+        marginBottom: '27@ms',
     },
     buttonContainer: {
         flexDirection: 'column',
         alignItems: 'center',
     },
     button: {
-        marginBottom: 15,
+        marginBottom: '15@ms',
     },
     additionalText: {
         color: colors.secondary,

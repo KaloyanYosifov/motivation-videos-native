@@ -1,10 +1,10 @@
 /**
  * External dependencies.
  */
-import { StyleSheet } from 'react-native';
+import { ScaledSheet } from 'react-native-size-matters';
 
-export default StyleSheet.create({
+export default ScaledSheet.create({
     logo: {
-        marginBottom: 100,
+        marginBottom: '100@ms',
     },
 });

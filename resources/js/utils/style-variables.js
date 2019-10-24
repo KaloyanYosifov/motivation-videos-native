@@ -6,13 +6,14 @@ export const colors = {
 };
 
 export const fontSize = {
-    h1: '48@ms',
-    h2: '42@ms',
-    h3: '32@ms',
-    h4: '24@ms',
-    h5: '18@ms',
-    h6: '14@ms',
+    h1: '96@ms',
+    h2: '60@ms',
+    h3: '48@ms',
+    h4: '34@ms',
+    h5: '24@ms',
+    h6: '20@ms',
     base: '16@ms',
+    alternativeBase: '14@ms',
     inputLabel: '18@ms',
     button: '24@ms',
 };

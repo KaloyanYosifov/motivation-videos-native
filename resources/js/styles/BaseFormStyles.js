@@ -28,7 +28,7 @@ export default ScaledSheet.create({
     },
     title: {
         color: colors.secondary,
-        fontSize: fontSize.h1,
+        fontSize: fontSize.h3,
         textAlign: 'center',
         fontWeight: 'bold',
     },

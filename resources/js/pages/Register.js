@@ -2,6 +2,7 @@
  * External dependencies.
  */
 import React from 'react';
+import { ScrollView } from 'react-native';
 
 /**
  * Internal dependencies.
@@ -15,10 +16,12 @@ import LoginRegisterStyles from '@/styles/LoginRegisterStyles';
 class Login extends Page {
     render() {
         return (
-            <BaseView>
-                <Logo style={LoginRegisterStyles.logo} />
-                <RegisterForm />
-            </BaseView>
+            <ScrollView>
+                <BaseView>
+                    <Logo style={LoginRegisterStyles.logo} />
+                    <RegisterForm />
+                </BaseView>
+            </ScrollView>
         );
     }
 }

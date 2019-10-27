@@ -11,8 +11,28 @@ import Button from '@/components/Button';
 import Navigator from '@/classes/Navigator';
 import Input from '@/components/form-elements/Input';
 import BaseFormStyles from '@/styles/BaseFormStyles';
+import api from '@/utils/api';
 
 class LoginForm extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            email: '',
+            password: '',
+        };
+    }
+
+    handleSubmit = () => {
+        api.post('login', {
+            email: this.state.email,
+            password: this.state.password,
+        })
+            .then(response => {
+                console.log(response);
+            });
+    }
+
     render() {
         return (
             <View style={this.props.style}>
@@ -26,6 +46,8 @@ class LoginForm extends React.Component {
                         label="Email:"
                         inputProps={{
                             autoCompleteType: 'email',
+                            onChangeText: email => this.setState({ email }),
+                            autoCapitalize: 'none',
                         }}
                     />
 
@@ -36,6 +58,8 @@ class LoginForm extends React.Component {
                             secureTextEntry: true,
                             autoCompleteType: 'password',
                             textContentType: 'password',
+                            onChangeText: password => this.setState({ password }),
+                            autoCapitalize: 'none',
                         }}
                     />
                 </View>
@@ -44,6 +68,7 @@ class LoginForm extends React.Component {
                     <Button
                         style={BaseFormStyles.button}
                         text="Login"
+                        onPress={this.handleSubmit}
                     />
 
                     <Text

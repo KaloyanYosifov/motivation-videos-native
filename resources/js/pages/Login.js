@@ -2,6 +2,7 @@
  * External dependencies.
  */
 import React from 'react';
+import { KeyboardAvoidingView } from 'react-native';
 
 /**
  * Internal dependencies.
@@ -16,8 +17,10 @@ class Login extends Page {
     render() {
         return (
             <BaseView>
-                <Logo style={LoginRegisterStyles.logo} />
-                <LoginForm />
+                <KeyboardAvoidingView>
+                    <Logo style={LoginRegisterStyles.logo} />
+                    <LoginForm />
+                </KeyboardAvoidingView>
             </BaseView>
         );
     }

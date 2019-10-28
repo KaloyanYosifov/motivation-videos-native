@@ -21,7 +21,7 @@ class RegisterForm extends React.Component {
             name: '',
             email: '',
             password: '',
-            confirmPassword: ''
+            confirmPassword: '',
         };
     }
 
@@ -32,7 +32,7 @@ class RegisterForm extends React.Component {
             name,
             email,
             password,
-            confirm_password
+            confirm_password,
         })
             .then(response => {
                 console.log(response);

@@ -4,7 +4,7 @@
 import axios from 'axios';
 
 const submitRequest = (method, route, data, headers) => {
-    return axios[method](process.env.APP_URL + '/' + route, data, headers)
+    return axios[method](process.env.APP_URL + '/api/' + route, data, headers)
         .catch(error => {
             return error.response;
         });

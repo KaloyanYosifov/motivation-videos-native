@@ -7,6 +7,7 @@ import { View, Text } from 'react-native';
 /**
  * Internal dependencies.
  */
+import Form from '@/components/renderless/Form';
 import Button from '@/components/Button';
 import Navigator from '@/classes/Navigator';
 import Input from '@/components/form-elements/Input';
@@ -23,24 +24,44 @@ class LoginForm extends React.Component {
         };
     }
 
-    handleSubmit = () => {
-        api.post('login', {
+    getData() {
+        return {
             email: this.state.email,
             password: this.state.password,
-        })
-            .then(response => {
-                console.log(response);
-            });
+        };
     }
 
-    render() {
+    handleRender(data) {
         return (
             <View style={this.props.style}>
                 <Text style={BaseFormStyles.title}>
                     Login
                 </Text>
 
+                {this.handleRenderLogic(data)}
+            </View>
+        );
+    }
+
+    handleRenderLogic = ({ submit, loading, status, error }) => {
+        if (loading) {
+            return (
+                <Text>Loading...</Text>
+            );
+        }
+
+        const errorMessageSection = () => {
+            if (!error) {
+                return null;
+            }
+
+            return <Text>{error}</Text>;
+        };
+
+        return (
+            <React.Fragment>
                 <View style={BaseFormStyles.inputsContainer}>
+                    {errorMessageSection()}
                     <Input
                         style={BaseFormStyles.input}
                         label="Email:"
@@ -68,7 +89,7 @@ class LoginForm extends React.Component {
                     <Button
                         style={BaseFormStyles.button}
                         text="Login"
-                        onPress={this.handleSubmit}
+                        onPress={() => this.onSubmit(submit)}
                     />
 
                     <Text
@@ -78,7 +99,22 @@ class LoginForm extends React.Component {
                         Don't have an account?
                     </Text>
                 </View>
-            </View>
+            </React.Fragment>
+        );
+    }
+
+    onSubmit = (submitCallback) => {
+        submitCallback()
+            .then(response => {
+                console.log(response);
+            });
+    }
+
+    render() {
+        return (
+            <Form data={this.getData()} endpoint="login">
+                {data => this.handleRender(data)}
+            </Form>
         );
     }
 }

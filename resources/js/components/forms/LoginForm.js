@@ -12,7 +12,6 @@ import Button from '@/components/Button';
 import Navigator from '@/classes/Navigator';
 import Input from '@/components/form-elements/Input';
 import BaseFormStyles from '@/styles/BaseFormStyles';
-import api from '@/utils/api';
 
 class LoginForm extends React.Component {
     constructor(props) {
@@ -43,7 +42,7 @@ class LoginForm extends React.Component {
         );
     }
 
-    handleRenderLogic = ({ submit, loading, status, error }) => {
+    handleRenderLogic = ({ submit, loading, error }) => {
         if (loading) {
             return (
                 <Text>Loading...</Text>
@@ -62,6 +61,7 @@ class LoginForm extends React.Component {
             <React.Fragment>
                 <View style={BaseFormStyles.inputsContainer}>
                     {errorMessageSection()}
+
                     <Input
                         style={BaseFormStyles.input}
                         label="Email:"
@@ -101,14 +101,14 @@ class LoginForm extends React.Component {
                 </View>
             </React.Fragment>
         );
-    }
+    };
 
     onSubmit = (submitCallback) => {
         submitCallback()
             .then(response => {
                 console.log(response);
             });
-    }
+    };
 
     render() {
         return (
